@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Coding Bootcamp Testimonials Slider</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style> -->
+  </head>
+  <body>
+    <section class="testimonials">
+      <div class="arrows">
+        <button class="prev">
+          <img src="./images/icon-prev.svg" alt="prev" />
+        </button>
+
+        <button class="next">
+          <img src="./images/icon-next.svg" alt="next" />
+        </button>
+      </div>
+      <!-- .arrows -->
+
+      <div>
+        <div class="person active">
+          <div class="img-container">
+            <img src="./images/image-rob.jpg" alt="Rob" />
+          </div>
+
+          <div class="body">
+            <p class="text">
+              “ I’ve been interested in coding for a while but never taken the
+              jump, until now. I couldn’t recommend this course enough. I’m now
+              in the job of my dreams and so excited about the future. ”
+            </p>
+            <h4>Rob Sinclair <span class="job">UX Engineer</span></h4>
+          </div>
+        </div>
+        <!-- .person -->
+
+        <div class="person hide">
+          <div class="img-container">
+            <img src="./images/image-john.jpg" alt="John" />
+          </div>
+
+          <div class="body">
+            <p class="text">
+              “ If you want to lay the best foundation possible I’d recommend
+              taking this course. The depth the instructors go into is
+              incredible. I now feel so confident about starting up as a
+              professional developer. ”
+            </p>
+            <h4>
+              John Tarkpor <span class="job">Junior Front-end Developer</span>
+            </h4>
+          </div>
+        </div>
+        <!-- .person -->
+      </div>
+    </section>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Disso</a>.
+    </div> -->
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

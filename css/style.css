@@ -1,0 +1,213 @@
+:root {
+  --dkBlue: hsl(240, 37%, 20%);
+  --grayishBlue: hsl(240, 18%, 77%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--dkBlue);
+  background-color: var(--white);
+  line-height: 1.3;
+  margin: 0;
+  position: relative;
+  min-height: 100vh;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/pattern-curve.svg");
+  background-position: bottom left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 35vw;
+  height: 7rem;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+.testimonials {
+  padding: 1rem 2rem 2rem;
+  position: relative;
+  margin: 0 auto;
+  max-width: 50rem;
+}
+
+.testimonials .arrows {
+  position: absolute;
+  top: 19.3125rem;
+  left: 13.25rem;
+  background-color: white;
+  padding: 0.6rem 0.5rem 0.5rem;
+  border-radius: 2rem;
+  z-index: 1;
+}
+
+.testimonials .arrows button {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: transform 200ms ease-in-out;
+}
+
+.testimonials .arrows button:hover {
+  transform: scale(1.1);
+}
+
+.testimonials .arrows .prev {
+  margin-right: 0.5rem;
+}
+
+.person {
+  transition: all 0.5s ease-in-out;
+}
+
+.person.hide {
+  /* visibility: hidden;
+  opacity: 0; */
+  display: none;
+  animation: fade-out 500ms ease-in-out forwards;
+}
+
+.person.active {
+  /* visibility: visible;
+  opacity: 1; */
+  display: block;
+  animation: fade-in 500ms ease-in-out forwards;
+}
+
+.person .img-container {
+  position: relative;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.person .img-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../images/pattern-bg.svg");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.person img {
+  display: block;
+  margin: 0 auto;
+  width: 17.5rem;
+  height: 17.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(32, 32, 70, 0.2);
+}
+
+.person .body {
+  text-align: center;
+  position: relative;
+  padding-top: 1.5rem;
+}
+
+.person .body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  background-image: url("../images/pattern-quotes.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.person .text {
+  margin-bottom: 0.75rem;
+}
+
+.person .job {
+  color: var(--grayishBlue);
+  font-size: 85%;
+  font-weight: normal;
+}
+
+/* for mobile */
+@media (max-width: 39.9375em) {
+  .person .img-container {
+    margin-bottom: 1.5rem;
+  }
+
+  .person .job {
+    display: block;
+    margin-top: 0.25rem;
+  }
+}
+
+/* for desktop */
+@media (min-width: 64em) {
+  .person.active {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .person.active .body {
+    margin-right: 1.5rem;
+  }
+
+  .testimonials .arrows {
+    left: 32.5rem;
+  }
+}
+
+/* fade in and fae out */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  1% {
+    visibility: visible;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    visibility: hidden;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
